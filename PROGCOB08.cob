@@ -6,6 +6,10 @@
       ******************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. PROGCOB08.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SPECIAL-NAMES.
+           DECIMAL-POINT IS COMMA.
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
@@ -25,7 +29,7 @@
             EVALUATE WRK-MEDIA
                WHEN 6 THRU 10
                    DISPLAY "APROVADO"
-               WHEN 2 THRU 5
+               WHEN 2 THRU 5,9
                     DISPLAY "RECUPERACAO"
                WHEN OTHER
                     DISPLAY "REPROVADO"
